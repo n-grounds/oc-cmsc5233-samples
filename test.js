@@ -1,2 +1,2 @@
-var name = "Nic Grounds";
-console.log( `Hello, ${name}` );
+var o = { firstname : 'Nicolas', lastname : 'Grounds' };
+console.log( `Hello, ${o.firstname} ${o.lastname}` );
