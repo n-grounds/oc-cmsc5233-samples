@@ -1,2 +1,5 @@
-var o = { firstname : 'Nicolas', lastname : 'Grounds' };
-console.log( `Hello, ${o.firstname} ${o.lastname}` );
+var o = { firstname : 'Nicolas', lastname : 'Grounds',
+        getName : function() {
+            return this.firstname + ' ' + this.lastname;
+        } };
+console.log( `Hello, ${o.getName()}` );
