@@ -1,2 +1,2 @@
-var name = "Nic";
-console.log( 'Hello, ' + name );
+var name = "Nic Grounds";
+console.log( `Hello, ${name}` );
