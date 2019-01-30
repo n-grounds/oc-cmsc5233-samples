@@ -23,5 +23,10 @@ function onTap(args) {
 //    }
 }
 
+function gotoPrefs(args) {
+    frame.topmost().navigate( 'home/second-page' );
+}
+
 exports.onNavigatingTo = onNavigatingTo;
 exports.onTap = onTap;
+exports.gotoPrefs = gotoPrefs;

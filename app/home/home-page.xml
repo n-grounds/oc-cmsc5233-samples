@@ -1,12 +1,29 @@
 <Page class="page"
     navigatingTo="onNavigatingTo"  
-    xmlns="http://schemas.nativescript.org/tns.xsd">
+    xmlns="http://schemas.nativescript.org/tns.xsd"
+    xmlns:nsDrawer="nativescript-ui-sidedrawer">
 
     <ActionBar class="action-bar">
         <Label class="action-bar-title" text="Home"></Label>
     </ActionBar>
 
-    <GridLayout rows="auto,*" columns="auto,auto,auto,*">
+    <nsDrawer:RadSideDrawer id="sideDrawer">
+        <nsDrawer:RadSideDrawer.drawerContent>
+            <StackLayout backgroundColor="gray">
+                <StackLayout height="56" style="text-align: center; vertical-align: center;">
+                    <Label text="Navigation Menu"/>
+                </StackLayout>
+                <ScrollView>
+                    <StackLayout>
+                        <Button text="Preferences" tap="gotoPrefs"
+                            padding="10"
+                            backgroundColor="lightgray"/> 
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+        </nsDrawer:RadSideDrawer.drawerContent>
+        <nsDrawer:RadSideDrawer.mainContent>
+            <GridLayout rows="auto,*" columns="auto,auto,auto,*">
         <Button text="Tap Me" tap="onTap"
             row="0" col="0" />
         <Label class="my-label" text="You've tapped "
@@ -17,5 +34,7 @@
         <Label class="my-label" text=" times"
          row="0" col="3" />
         
-    </GridLayout>
+            </GridLayout>
+        </nsDrawer:RadSideDrawer.mainContent>
+    </nsDrawer:RadSideDrawer>
 </Page>
