@@ -6,7 +6,11 @@
         <Label class="action-bar-title" text="Home"></Label>
     </ActionBar>
 
-    <GridLayout>
-        <!-- Add your page content here -->
+    <GridLayout rows="auto,*" columns="auto,*">
+        <Button text="Tap Me" tap="onTap"
+            row="0" col="0" />
+        <Label id="label"
+         text="You've tapped 0 times"
+         row="0" col="1" />
     </GridLayout>
 </Page>
