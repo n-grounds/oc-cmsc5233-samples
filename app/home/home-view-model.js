@@ -2,7 +2,7 @@ const observableModule = require("tns-core-modules/data/observable");
 
 function HomeViewModel() {
     const viewModel = observableModule.fromObject({
-        /* Add your view model properties here */
+        counter : 0
     });
 
     return viewModel;

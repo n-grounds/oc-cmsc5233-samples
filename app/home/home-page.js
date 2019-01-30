@@ -6,20 +6,20 @@ logic, and to set up your page’s data binding.
 
 const HomeViewModel = require("./home-view-model");
 const view = require("tns-core-modules/ui/core/view");
+const frame = require("tns-core-modules/ui/frame");
 
 function onNavigatingTo(args) {
     const page = args.object;
     page.bindingContext = new HomeViewModel();
 }
 
-var counter = 0;
-
 function onTap(args) {
-    counter++;
+    const page = frame.topmost().currentPage;
+    page.bindingContext.counter++;
     const button = args.object;
     const label = view.getViewById( button.parent, 'label' );
     if( label ) {
-        label.text = `You've tapped ${counter} times`;
+        label.text = `You've tapped ${page.bindingContext.counter} times`;
     }
 }
 
