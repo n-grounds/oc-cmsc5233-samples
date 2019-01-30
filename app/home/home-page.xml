@@ -6,11 +6,16 @@
         <Label class="action-bar-title" text="Home"></Label>
     </ActionBar>
 
-    <GridLayout rows="auto,*" columns="auto,*">
+    <GridLayout rows="auto,*" columns="auto,auto,auto,*">
         <Button text="Tap Me" tap="onTap"
             row="0" col="0" />
-        <Label id="label"
-         text="You've tapped 0 times"
-         row="0" col="1" />
+        <Label class="my-label" text="You've tapped "
+            row="0" col="1" />
+        <Label id="label" class="my-label"
+         text="{{counter}}"
+         row="0" col="2" />
+        <Label class="my-label" text=" times"
+         row="0" col="3" />
+        
     </GridLayout>
 </Page>

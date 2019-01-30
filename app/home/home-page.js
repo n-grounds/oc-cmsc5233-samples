@@ -16,11 +16,11 @@ function onNavigatingTo(args) {
 function onTap(args) {
     const page = frame.topmost().currentPage;
     page.bindingContext.counter++;
-    const button = args.object;
-    const label = view.getViewById( button.parent, 'label' );
-    if( label ) {
-        label.text = `You've tapped ${page.bindingContext.counter} times`;
-    }
+//    const button = args.object;
+//    const label = view.getViewById( button.parent, 'label' );
+//    if( label ) {
+//        label.text = `You've tapped ${page.bindingContext.counter} times`;
+//    }
 }
 
 exports.onNavigatingTo = onNavigatingTo;
