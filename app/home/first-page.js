@@ -9,7 +9,7 @@ function onNavigatingTo(args) {
 }
 
 function onTap(args) {
-    const page = frame.topmost().currentPage;
+    const page = frame.getFrameById('innerFrame').currentPage;
     page.bindingContext.counter++;
 //    const button = args.object;
 //    const label = view.getViewById( button.parent, 'label' );
