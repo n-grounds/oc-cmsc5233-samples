@@ -10,7 +10,10 @@ function onNavigatingTo(args) {
 
 function onTap(args) {
     const page = frame.getFrameById('innerFrame').currentPage;
+    const label = page.getViewById('countLabel');
     page.bindingContext.counter++;
+    console.log(`${label.style}`);
+    label.style = 'font-size: ' + (20+page.bindingContext.counter) + 'px;';
 //    const button = args.object;
 //    const label = view.getViewById( button.parent, 'label' );
 //    if( label ) {

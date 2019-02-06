@@ -8,6 +8,8 @@
     </ActionBar>
 
     <GridLayout rows="auto,*" columns="auto,*">
-        <Label text="Welcome to the second page" colSpan="2" row="0" />
+        <Label text="Welcome to the second page"
+            class="fun-label" textWrap="true"
+            colSpan="2" row="0" />
     </GridLayout>
 </Page>

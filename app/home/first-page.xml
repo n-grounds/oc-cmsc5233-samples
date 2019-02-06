@@ -6,7 +6,8 @@
     <GridLayout rows="auto,*" columns="auto,*">
         <Button text="Tap Me" tap="onTap"
             row="0" col="0" />
-        <Label class="my-label" text="{{ 'You\'ve tapped ' + counter + ' times' }}"
+        <Label class="my-label" id="countLabel" textWrap="true"
+            text="{{ 'You\'ve tapped ' + counter + ' times' }}"
             row="0" col="1" />
     </GridLayout>
 </Page>
