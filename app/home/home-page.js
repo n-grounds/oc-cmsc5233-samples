@@ -11,7 +11,10 @@ function goto(args) {
     const pageName = args.object.text;
     console.log( `${pageName} : ${args.object}` );
     if( pageName == 'First Page' ) {
-        frame.getFrameById('innerFrame').navigate( 'home/first-page' );
+        frame.getFrameById('innerFrame').navigate( {
+            moduleName: 'home/first-page',
+            context: frame.getFrameById('innerFrame').currentPage.bindingContext
+         } );
     }
     else if( pageName == 'Second Page' ) {
         frame.getFrameById('innerFrame').navigate( 'home/second-page' );
