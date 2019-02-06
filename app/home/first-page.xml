@@ -3,15 +3,10 @@
     xmlns="http://schemas.nativescript.org/tns.xsd"
     actionBarHidden="true">
 
-    <GridLayout rows="auto,*" columns="auto,auto,auto,*">
+    <GridLayout rows="auto,*" columns="auto,*">
         <Button text="Tap Me" tap="onTap"
             row="0" col="0" />
-        <Label class="my-label" text="You've tapped "
+        <Label class="my-label" text="{{ 'You\'ve tapped ' + counter + ' times' }}"
             row="0" col="1" />
-        <Label id="label" class="my-label"
-         text="{{counter}}"
-         row="0" col="2" />
-        <Label class="my-label" text=" times"
-         row="0" col="3" />
     </GridLayout>
 </Page>
