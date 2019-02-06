@@ -5,17 +5,21 @@ const frame = require("tns-core-modules/ui/frame");
 
 function onNavigatingTo(args) {
     const page = args.object;
-    page.bindingContext = new HomeViewModel();
 }
 
-function onTap(args) {
-    const page = frame.topmost().currentPage;
-    page.bindingContext.counter++;
-//    const button = args.object;
-//    const label = view.getViewById( button.parent, 'label' );
-//    if( label ) {
-//        label.text = `You've tapped ${page.bindingContext.counter} times`;
-//    }
+function goto(args) {
+    const pageName = args.object.text;
+    console.log( `${pageName} : ${args.object}` );
+    if( pageName == 'First Page' ) {
+        frame.getFrameById('innerFrame').navigate( 'home/first-page' );
+    }
+    else if( pageName == 'Second Page' ) {
+        frame.getFrameById('innerFrame').navigate( 'home/second-page' );
+    }
+    //remember to close the drawer after navigating
+    const page = frame.getFrameById('topFrame').currentPage;
+    const drawer = page.getViewById('sideDrawer');
+    drawer.closeDrawer();
 }
 
 function gotoPrefs(args) {
@@ -23,5 +27,5 @@ function gotoPrefs(args) {
 }
 
 exports.onNavigatingTo = onNavigatingTo;
-exports.onTap = onTap;
+exports.goto = goto;
 exports.gotoPrefs = gotoPrefs;

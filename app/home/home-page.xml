@@ -15,6 +15,12 @@
                 </StackLayout>
                 <ScrollView>
                     <StackLayout>
+                        <Button text="First Page" tap="goto"
+                            padding="10"
+                            backgroundColor="lightgray"/>
+                        <Button text="Second Page" tap="goto"
+                            padding="10"
+                            backgroundColor="lightgray"/>  
                         <Button text="Preferences" tap="gotoPrefs"
                             padding="10"
                             backgroundColor="lightgray"/> 
