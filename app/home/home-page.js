@@ -27,5 +27,11 @@ function gotoPrefs(args) {
 }
 
 exports.onNavigatingTo = onNavigatingTo;
+exports.openDrawer = (args) => {
+    const f = frame.getFrameById('topFrame');
+    const page = f.currentPage;
+    const drawer = page.getViewById('sideDrawer');
+    drawer.toggleDrawerState();
+};
 exports.goto = goto;
 exports.gotoPrefs = gotoPrefs;

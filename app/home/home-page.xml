@@ -4,6 +4,7 @@
     xmlns:nsDrawer="nativescript-ui-sidedrawer">
 
     <ActionBar class="action-bar">
+        <NavigationButton icon="res://menu" tap="openDrawer" />
         <Label class="action-bar-title" text="Home"></Label>
     </ActionBar>
 
