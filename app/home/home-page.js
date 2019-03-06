@@ -3,8 +3,18 @@ In NativeScript, a file with the same name as an XML file is known as
 a code-behind file. The code-behind is a great place to place your view
 logic, and to set up your page’s data binding.
 */
-
+const frame = require('tns-core-modules/ui/frame');
 const HomeViewModel = require("./home-view-model");
+
+function onPageLoaded(args) {
+    const page = args.object;
+    page.getViewById('gotoSettings').on( 'tap', (args) => {
+        frame.topmost().navigate( {
+            moduleName: 'home/settings',
+            context: {}
+        } );
+    } );
+}
 
 function onNavigatingTo(args) {
     const page = args.object;
@@ -19,4 +29,5 @@ function onNavigatingTo(args) {
         (reason) => { console.error( `When fetching catfacts: ${reason}` ); } );
 }
 
+exports.onPageLoaded = onPageLoaded;
 exports.onNavigatingTo = onNavigatingTo;
