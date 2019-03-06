@@ -18,3 +18,9 @@ components that have the btn class name.
 .btn {
     font-size: 18;
 }
+
+.fact {
+    font-size: 18;
+    color: #ffff00;
+    background-color: #444444;
+}

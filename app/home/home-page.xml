@@ -10,7 +10,8 @@
         <ListView height="100%" items="{{items}}" id="mainList">
             <ListView.itemTemplate>
                 <StackLayout>
-                    <Label text="{{fact}}" textWrap="true" />
+                    <Label text="{{fact}}" textWrap="true"
+                            class="fact" />
                 </StackLayout>
             </ListView.itemTemplate>
         </ListView>

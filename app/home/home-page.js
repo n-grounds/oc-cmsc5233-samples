@@ -12,6 +12,8 @@ function onNavigatingTo(args) {
 
     fetch('https://catfact.ninja/facts?limit=10').then(
         (value) => { value.json().then( (obj) => {
+            //the following simulates a 10 second delay fetching cat facts
+            //setTimeout( () => { page.bindingContext.items = obj.data }, 10000 );
             page.bindingContext.items = obj.data;
         } ); },
         (reason) => { console.error( `When fetching catfacts: ${reason}` ); } );
