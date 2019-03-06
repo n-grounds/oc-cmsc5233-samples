@@ -6,7 +6,11 @@
         <Label class="action-bar-title" text="Home"></Label>
     </ActionBar>
 
-    <GridLayout>
-        <!-- Add your page content here -->
-    </GridLayout>
+    <StackLayout>
+        <ListView height="150" items="{{items}}" id="mainList">
+            <ListView.itemTemplate>
+                <Label text="{{text}}" />
+            </ListView.itemTemplate>
+        </ListView>
+    </StackLayout>
 </Page>
