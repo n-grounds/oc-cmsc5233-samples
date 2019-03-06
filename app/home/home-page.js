@@ -4,6 +4,7 @@ a code-behind file. The code-behind is a great place to place your view
 logic, and to set up your page’s data binding.
 */
 const frame = require('tns-core-modules/ui/frame');
+const settings = require('tns-core-modules/application-settings');
 const HomeViewModel = require("./home-view-model");
 
 function onPageLoaded(args) {
@@ -27,6 +28,7 @@ function onNavigatingTo(args) {
             page.bindingContext.items = obj.data;
         } ); },
         (reason) => { console.error( `When fetching catfacts: ${reason}` ); } );
+    page.css = `.fact { font-size: ${settings.getNumber( 'fontSize', 18 )} }`;
 }
 
 exports.onPageLoaded = onPageLoaded;

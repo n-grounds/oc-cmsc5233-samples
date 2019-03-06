@@ -6,7 +6,8 @@
         <Label class="action-bar-title" text="Home"></Label>
     </ActionBar>
 
-    <StackLayout>
-        
-    </StackLayout>
+    <GridLayout rows="auto,*" columns="auto,*">
+        <Label text="Font Size:" row="1" col="1" />
+        <Slider value="{{fontSize}}" minValue="10" maxValue="32" row="1" col="2" />
+    </GridLayout>
 </Page>
