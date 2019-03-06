@@ -7,9 +7,11 @@
     </ActionBar>
 
     <StackLayout>
-        <ListView height="150" items="{{items}}" id="mainList">
+        <ListView height="100%" items="{{items}}" id="mainList">
             <ListView.itemTemplate>
-                <Label text="{{text}}" />
+                <StackLayout>
+                    <Label text="{{fact}}" textWrap="true" />
+                </StackLayout>
             </ListView.itemTemplate>
         </ListView>
     </StackLayout>

@@ -5,7 +5,8 @@ function HomeViewModel() {
         items : [
             { text: 'hello' },
             { text: 'world' }
-        ]
+        ],
+        test: 'test this'
     });
 
     return viewModel;

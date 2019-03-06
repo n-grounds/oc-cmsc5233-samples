@@ -9,6 +9,12 @@ const HomeViewModel = require("./home-view-model");
 function onNavigatingTo(args) {
     const page = args.object;
     page.bindingContext = new HomeViewModel();
+
+    fetch('https://catfact.ninja/facts?limit=10').then(
+        (value) => { value.json().then( (obj) => {
+            page.bindingContext.items = obj.data;
+        } ); },
+        (reason) => { console.error( `When fetching catfacts: ${reason}` ); } );
 }
 
 exports.onNavigatingTo = onNavigatingTo;
