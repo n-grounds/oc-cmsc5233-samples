@@ -5,7 +5,7 @@
 
     <ActionBar class="action-bar">
         <Label class="action-bar-title" text="Home"></Label>
-        <Button text="Settings" id="gotoSettings" />
+        <Image src="res://settings" id="gotoSettings" style="height: 24px" />
     </ActionBar>
 
     <StackLayout>
