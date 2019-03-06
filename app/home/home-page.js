@@ -9,11 +9,12 @@ const HomeViewModel = require("./home-view-model");
 
 function onPageLoaded(args) {
     const page = args.object;
-    page.getViewById('gotoSettings').on( 'tap', (args) => {
-        frame.topmost().navigate( {
-            moduleName: 'home/settings',
-            context: {}
-        } );
+}
+
+function gotoSettings(args) {
+    frame.topmost().navigate( {
+        moduleName: 'home/settings',
+        context: {}
     } );
 }
 
@@ -32,4 +33,5 @@ function onNavigatingTo(args) {
 }
 
 exports.onPageLoaded = onPageLoaded;
+exports.gotoSettings = gotoSettings;
 exports.onNavigatingTo = onNavigatingTo;
